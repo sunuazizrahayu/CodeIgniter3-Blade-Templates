@@ -1136,7 +1136,7 @@ class Slice {
 	{
 		$pattern = '/(\s*)@yield(\s*\(.*\))/';
 
-		return preg_replace($pattern, '<?php echo $this->_yield$2; ?>', $content);
+		return preg_replace($pattern, '$1<?php echo $this->_yield$2; ?>', $content);
 	}
 
 	// --------------------------------------------------------------------------

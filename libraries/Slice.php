@@ -1162,7 +1162,7 @@ class Slice {
 	 */
 	protected function _compile_opening_section($content)
 	{
-		$pattern = '/(\s*)@section(\s*\(.*\))/';
+		$pattern = '/(\s*)@section\s*(\((.*?)\))/';
 
 		return preg_replace($pattern, '<?php $this->_opening_section$2; ?>', $content);
 	}

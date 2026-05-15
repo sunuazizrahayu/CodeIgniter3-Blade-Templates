@@ -21,13 +21,25 @@ Slice-Library is a CodeIgniter library that simulates Laravel's Blade templating
 - PHP version 5.6 or newer is recommended.
 - CodeIgniter version 2.2.1 or newer.
 
-## Instalation
+## Installation
 
-To use the Slice-Library you must first copy the file located in `application/config/slice.php` to your own `application/config/` folder. Then, edit this file according to your configurations.
-Now, copy the file `application/libraries/Slice.php` to your own `application/libraries/` folder.
-Finally, make sure the folder `application/cache/` has a **`0664`** permission to save the compiled templates the library will produce.
+- To use Slice-Library, you can use the following methods:
+    - ### Copy the Files
+        - Copy the `config`, `helpers`, and `libraries` directories into your `application` project.
+        - Replace the existing files if needed.
 
-That's all! Have fun!
+    - ### Third-Party
+        - You can use Slice-Library as a third-party library with the following command:
+            ```bash
+            git clone https://github.com/sunuazizrahayu/CodeIgniter3-Blade-Templates.git application/third_party/Slice-Library
+            ```
+        - Open your `application/config/autoload.php` file.
+        - Add `APPPATH . 'third_party/Slice-Library'` to `$autoload['packages']`, so it becomes:
+            ```
+            $autoload['packages'] = array(APPPATH . 'third_party/Slice-Library');
+            ```
+- Make sure the `application/cache/` folder has `0664` permissions so the library can save the compiled templates it generates.
+
 
 ## Loading Slice-Library
 
